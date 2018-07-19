@@ -112,11 +112,11 @@ cc.Class({
 
     initCurrentScore:function(){
         //如果locaStorage有数据，恢复 当前分数和步数
-        if(is_momo7 && Store.stepCount.get()){
+        if(Store.stepCount.get()){
             this.stepCount.string = Store.stepCount.get();
         }
         var cScore=0;
-        if(is_momo7 && Store.currentScore.get()){
+        if(Store.currentScore.get()){
             cScore=parseInt( Store.currentScore.get() );    
         }
         this.currentScoreBase = cScore;
@@ -177,7 +177,7 @@ cc.Class({
                     {row:i+1, column:i >= 4 ? j-1 : j}, // i >= 4 column:j-1
                     {row:i, column:j-1}
                 ];
-                if(is_momo7 && storeBox){
+                if(storeBox){
                     info.colorId = parseInt(storeBox[i][j].colorId);
                     info.occupy = parseInt(storeBox[i][j].occupy);
                 }

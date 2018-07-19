@@ -1,4 +1,5 @@
-const local = localStorage;
+//const local = localStorage;
+const local = cc.sys.localStorage;
 const Store = {
     stepCount:{
         get:function(){
